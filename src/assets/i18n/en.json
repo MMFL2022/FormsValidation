@@ -1,0 +1,14 @@
+{
+    "test": "testing, testing, 1, 2, 3",
+    "tester": {
+        "testFieldA": "Test Field A",
+        "testFieldAHint": "Hint for Test Field A",
+        "validations": {
+            "testFieldA": {
+              "duplicated": "Parameter name is duplicated!",
+              "invalidCharacters": "Parameter name must contain special characters!",
+              "required": "Parameter name is required!"
+            }
+          }
+    }
+}

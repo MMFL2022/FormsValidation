@@ -1,3 +1,38 @@
 <div>
-  <h4>My App!</h4>
+  <h4>Forms Validation Tester!</h4>
+
+  <div class="row">
+    <p>{{ 'test' | translate }}</p>
+  </div>
+
+  <div class="row">
+    <div class="container">
+      <form [formGroup]="testFormGroup">
+        <div class="row">
+          <div class="col-4">
+            <mat-form-field class="w-100">
+              <mat-label>
+                {{ 'tester.testFieldA' | translate }}
+              </mat-label>
+              <input
+                matInput
+                type="text"
+                data-form-type="other"
+                #testFieldA
+                formControlName="testFieldAInput"
+                placeholder="{{ 'tester.testFieldA' | translate }}"
+                [ngModel]="testFieldAModel != undefined ? testFieldAModel : ''">
+    
+              <mat-hint align="start">{{ 'tester.testFieldAHint' | translate }}</mat-hint>
+              <mat-hint align="end">{{testFieldA.value.length}} / 64</mat-hint>
+  
+              <mat-error *ngIf="duplicateName && (testFormGroup.controls.testFieldAInput.dirty && testFormGroup.controls.testFieldAInput.touched)">{{ 'tester.validations.testFieldA.duplicated' | translate }}</mat-error>
+              <mat-error *ngIf="testFormGroup.controls.testFieldAInput.errors?.pattern && (testFormGroup.controls.testFieldAInput.dirty && testFormGroup.controls.testFieldAInput.touched)">{{ 'tester.validations.testFieldA.invalidCharacters' | translate }}</mat-error>
+              <mat-error *ngIf="testFormGroup.controls.testFieldAInput.errors?.required">{{ 'tester.validations.testFieldA.required' | translate }}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
