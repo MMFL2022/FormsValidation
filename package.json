@@ -15,13 +15,12 @@
     "@ng-bootstrap/ng-bootstrap": "^15.1.1",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
-    "angular-froala-wysiwyg": "^4.1.2",
     "bootstrap": "^5.3.1",
     "jest-editor-support": "*",
     "popper.js": "^1.16.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.13.0"
+    "zone.js": "^0.14.0"
   },
   "scripts": {
     "ng": "ng",

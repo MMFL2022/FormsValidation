@@ -40,11 +40,17 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "outputPath": "dist/demo",
-            "scripts": [],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "tsConfig": "tsconfig.app.json"
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "polyfills": [
+              "zone.js"
+            ]
           }
         },
         "extract-i18n": {
